@@ -1,27 +1,27 @@
-#kmeans_method¬°°Æµ{¦¡
+#kmeans_methodç‚ºå‰¯ç¨‹å¼
 
-#integrate¬O¥Dµ{¦¡¡A°õ¦æ¦¹µ{¦¡§Y¥i
+#integrateæ˜¯ä¸»ç¨‹å¼ï¼ŒåŸ·è¡Œæ­¤ç¨‹å¼å³å¯
 
  	""""""
     kmeans(datasets, k, convergence = 1e-6, method = True)
 
 
-    #°Ñ¼Æ»¡©ú#
-    datasets: ¸ê®Æ¶°
-    k: ¤À¸s­Ó¼Æ
-    convergence: ¦¬ÀÄ±ø¥ó¡A¹w³]¬°10^-6
-    method: True¬°AFKMC2¡AFalse¬°kmeans++
+    #åƒæ•¸èªªæ˜#
+    datasets: è³‡æ–™é›†
+    k: åˆ†ç¾¤å€‹æ•¸
+    convergence: æ”¶æ–‚æ¢ä»¶ï¼Œé è¨­ç‚º10^-6
+    method: Trueç‚ºAFKMC2ï¼ŒFalseç‚ºkmeans++
     
-    #ªğ¦^#
-    begining_centroids: ªì©l½è¤ß¦ì¸m
-    cluster_centroids(k, var): ³Ì²×½è¤ß¦ì¸m
-    null_clusterAssign: ¼ĞÅÒ
-    np.sum(SSE_cluster[:,1]): ¦U¼ĞÅÒ¨ì¦U¦Û½è¤ßªºSSEÁ`©M
-    times: ­¡¥N¦¸¼Æ
+    #è¿”å›#
+    begining_centroids: åˆå§‹è³ªå¿ƒä½ç½®
+    cluster_centroids(k, var): æœ€çµ‚è³ªå¿ƒä½ç½®
+    null_clusterAssign: æ¨™ç±¤
+    np.sum(SSE_cluster): å„æ¨™ç±¤åˆ°å„è‡ªè³ªå¿ƒçš„SSEç¸½å’Œ
+    times: è¿­ä»£æ¬¡æ•¸
     
-    #¨Ï¥Î#
+    #ä½¿ç”¨#
     from sklearn import datasets
-    # Åª¤J»ğ§Àªá¸ê®Æ
+    # è®€å…¥é³¶å°¾èŠ±è³‡æ–™
     iris = datasets.load_iris()
     X = iris.data
     X_begining_centroids, X_final_centroids ,X_label, X_SSE, X_times = kmeans(X, 3, convergence=1e-6, method=True)
