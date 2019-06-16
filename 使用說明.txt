@@ -1,0 +1,30 @@
+#kmeans_method為副程式
+
+#integrate是主程式，執行此程式即可
+
+ 	""""""
+    kmeans(datasets, k, convergence = 1e-6, method = True)
+
+
+    #參數說明#
+    datasets: 資料集
+    k: 分群個數
+    convergence: 收斂條件，預設為10^-6
+    method: True為AFKMC2，False為kmeans++
+    
+    #返回#
+    begining_centroids: 初始質心位置
+    cluster_centroids(k, var): 最終質心位置
+    null_clusterAssign: 標籤
+    np.sum(SSE_cluster[:,1]): 各標籤到各自質心的SSE總和
+    times: 迭代次數
+    
+    #使用#
+    from sklearn import datasets
+    # 讀入鳶尾花資料
+    iris = datasets.load_iris()
+    X = iris.data
+    X_begining_centroids, X_final_centroids ,X_label, X_SSE, X_times = kmeans(X, 3, convergence=1e-6, method=True)
+
+
+ 	""""""
